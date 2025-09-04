@@ -45,6 +45,9 @@ You can think of a DataFrame as a two-dimensional table or a spreadsheet in Pyth
 - Each column has a name.  
 - Each row has an index number.  
 
+<img width="644" height="344" alt="Screenshot 2025-09-04 at 6 39 39 PM" src="https://github.com/user-attachments/assets/db1dc11e-9eb2-40cb-9eef-e4947925b372" />
+
+
 Rule of Thumb: a DataFrame has two axes, just like a table.  
 - **Rows** (top to bottom) = Axis 0  
 - **Columns** (left to right) = Axis 1  
@@ -55,7 +58,11 @@ Rule of Thumb: a DataFrame has two axes, just like a table.
 You can think of a Series as just one column from a DataFrame.  
 - It has values and an index, but only one column.  
 - Can store heterogeneous data types.  
-- A Series is like a fancy list that knows the name of each item.  
+- A Series is like a fancy list that knows the name of each item.
+
+<img width="640" height="291" alt="Screenshot 2025-09-04 at 6 40 01 PM" src="https://github.com/user-attachments/assets/a8d01a5b-0cfa-43fc-a21e-dfad2f04b4ac" />
+
+<img width="638" height="408" alt="Screenshot 2025-09-04 at 6 40 17 PM" src="https://github.com/user-attachments/assets/b8b9a6e0-cca6-4e71-bb23-b91953cf6c99" />
 
 👉 More on Series: [GeeksforGeeks Pandas Series](https://www.geeksforgeeks.org/python/python-pandas-series/)  
 
@@ -101,6 +108,7 @@ data = {
 df = pd.DataFrame(data)
 print(df)
 ```
+<img width="454" height="211" alt="Screenshot 2025-09-04 at 6 40 42 PM" src="https://github.com/user-attachments/assets/4757d3e1-81f4-4f03-b2bc-64738a8b9189" />
 
 **From a List of Dictionaries:**  
 ```python
@@ -111,6 +119,7 @@ students = [
 df = pd.DataFrame(students)
 print(df)
 ```
+<img width="498" height="217" alt="Screenshot 2025-09-04 at 6 40 57 PM" src="https://github.com/user-attachments/assets/d2a626d4-f7c4-48d9-aa2b-c71cbc9412f8" />
 
 **From a List of Lists (with column names):**  
 ```python
@@ -122,6 +131,7 @@ data = [
 df = pd.DataFrame(data, columns=["name", "age", "grade"])
 print(df)
 ```
+<img width="464" height="220" alt="Screenshot 2025-09-04 at 6 41 18 PM" src="https://github.com/user-attachments/assets/720e22bb-f2a5-4bbd-b76d-24ff728634ff" />
 
 ---
 
@@ -133,6 +143,7 @@ numbers = [10, 20, 30, 40]
 num_series = pd.Series(numbers)
 print(num_series)
 ```
+<img width="298" height="209" alt="Screenshot 2025-09-04 at 6 41 29 PM" src="https://github.com/user-attachments/assets/2a063e18-7225-46aa-850b-e75c34a96bab" />
 
 **From a list with custom labels:**  
 ```python
@@ -141,6 +152,7 @@ names = ["Alice", "Bob", "Carol"]
 my_series = pd.Series(data, index=names)
 print(my_series)
 ```
+<img width="286" height="207" alt="Screenshot 2025-09-04 at 6 41 48 PM" src="https://github.com/user-attachments/assets/0dd95702-65bb-4439-beb8-44e5d9cca183" />
 
 **From a Dictionary:**  
 ```python
@@ -148,6 +160,7 @@ data = {"Alice": 85, "Bob": 90, "Carol": 95}
 my_dict_series = pd.Series(data)
 print(my_dict_series)
 ```
+<img width="282" height="226" alt="Screenshot 2025-09-04 at 6 42 02 PM" src="https://github.com/user-attachments/assets/e8771a74-4755-43f1-ae0c-3ec630c46ee0" />
 
 ---
 
@@ -161,10 +174,13 @@ data = {
 df = pd.DataFrame(data)
 print(df)
 
+<img width="283" height="202" alt="Screenshot 2025-09-04 at 6 42 56 PM" src="https://github.com/user-attachments/assets/baa1b038-667c-4ba6-a07c-184f201de3df" />
+
 # Read a Series (pick a column)
 ages = df["age"]
 print(ages)
 ```
+<img width="483" height="217" alt="Screenshot 2025-09-04 at 6 43 08 PM" src="https://github.com/user-attachments/assets/2b37d44f-88f6-4475-8b32-f3634fbadb59" />
 
 ---
 
@@ -173,14 +189,19 @@ print(ages)
 - A DataFrame is really just a collection of Series.  
 - Series can have **labels** (indexes) which make it easy to access values.  
 - Series handle **missing data** with NaN gracefully.  
-
+- Let’s test this concept
 ```python
 s = pd.Series([85, 90, 95], index=["Alice", "Bob", "Carol"])
 print(s["Bob"])  # Output: 90
 
+- Another important reason, series handles missing data effortlessly. Missing Data = gaps or no values or None values
+- Pandas allows NaN inside a Series. Instead of crashing or giving wrong results, it understands that the value is missing.
+- Let’s test
+
 s = pd.Series([10, None, 30])
 print(s)  # Handles missing values
 ```
+<img width="317" height="182" alt="Screenshot 2025-09-04 at 6 44 59 PM" src="https://github.com/user-attachments/assets/0e8fb902-6bdc-43bd-9b7f-ce9c46f1ee44" />
 
 ---
 
@@ -192,15 +213,57 @@ When you load a dataset, you might want to get a quick look at it. Pandas provid
 - `.info()` → Structure, datatypes, missing values  
 - `.describe()` → Quick statistics summary  
 
-Example with `students.csv`:
+Example with `students.csv`:Let’s Load the data using-import pandas as pd 
+- optional if you already have imported pandas {students_df = pd.read_csv("students.csv")}
+- Here’s what the dataset looks like:
+<img width="653" height="323" alt="Screenshot 2025-09-04 at 6 46 31 PM" src="https://github.com/user-attachments/assets/4f17a569-dfd4-4314-9a79-3b126d059b39" />
+
 
 ```python
 students_df = pd.read_csv("students.csv")
-print(students_df.head(2))   # First 2 rows
+<img width="569" height="239" alt="Screenshot 2025-09-04 at 6 47 08 PM" src="https://github.com/user-attachments/assets/213fd019-ccb3-42bb-a96c-98cf9da1378f" />
+
+- .tail(): Look at the End. If .head() is a sneak peek at the start, then .tail() is a sneak peek at the end.
+- By default, .tail() shows the last 5 rows of your dataset.
+- Let’s try: print(students_df.tail()) #prints last 5 rows.
+
 print(students_df.tail())    # Last 5 rows
-print(students_df.info())    # Structure info
-print(students_df.describe()) # Stats summary
 ```
+<img width="516" height="280" alt="Screenshot 2025-09-04 at 6 48 17 PM" src="https://github.com/user-attachments/assets/5190b786-a3a7-4d91-9621-76b0a17308e2" />
+
+- .info():  Get the Blueprint
+- .info() is like asking Pandas: “Tell me the structure of this dataset.”
+- Let’s try: print(students_df.info())
+- When you run df.info(), Pandas gives you a summary report of your DataFrame.
+<img width="445" height="334" alt="Screenshot 2025-09-04 at 6 49 45 PM" src="https://github.com/user-attachments/assets/183e4323-3c7b-43f8-a92f-c9dc36b7e6d4" />
+
+- Understanding .info() Output
+RangeIndex: The dataset has 6 rows (0 to 5).
+Data columns:  The dataset has 6 columns.
+Columns: id, name, age, grade, city, score.
+Missing values: Some columns have missing values: age, grade, city, score.
+Data types: Numbers (int, float) and text (object).
+.describe(): Quick Statistics
+.describe() gives you a quick summary of the numbers in your dataset.
+
+- Let’s try: print(students_df.describe())
+Gives us:
+
+<img width="432" height="205" alt="Screenshot 2025-09-04 at 6 50 58 PM" src="https://github.com/user-attachments/assets/43c25eb3-50fc-4423-ae0f-0408e62cdec5" />
+
+- What .describe() tells us:
+count: how many values (notice 5, not 6, because of missing data)
+mean: the average
+min & max: smallest and biggest
+25%, 50%, 75%: quartiles (like checkpoints in the data)
+
+So .describe() is like a quick health report of your numbers.
+
+
+
+- Quick tip
+Usually the experts suggest these three are always the first commands you should run after loading any dataset, so that you get a good knowledge of your data you will be working with.
+
 
 ---
 
@@ -209,16 +272,38 @@ print(students_df.describe()) # Stats summary
 You have the dataset **students.csv** loaded into a DataFrame called `students_df`.  
 
 **Q1. How many rows are in the dataset?**  
-A1. 6 rows  
+<details>
+<summary>Show Answer</summary>
+
+6 rows
+</details>
 
 **Q2. How many columns are there?**  
-A2. 6 columns  
+<details>
+<summary>Show Answer</summary>
+
+6 columns
+</details>
 
 **Q3. Which columns have missing values?**  
-A3. age, grade, city, score  
+<details>
+<summary>Show Answer</summary>
+
+age, grade, city, score
+</details>
 
 **Q4. What are the data types of the age and score columns?**  
-A4. Both are float64  
+<details>
+<summary>Show Answer</summary>
+
+Both are float64
+</details>
 
 **Q5 (Bonus). How many students are missing their score?**  
-A5. 1 student  
+<details>
+<summary>Show Answer</summary>
+
+1 student
+</details>
+
+---
