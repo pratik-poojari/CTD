@@ -208,11 +208,11 @@ print(ages)
 ```python
 s = pd.Series([85, 90, 95], index=["Alice", "Bob", "Carol"])
 print(s["Bob"])  # Output: 90
-
+```
 - Another important reason, series handles missing data effortlessly. Missing Data = gaps or no values or None values
 - Pandas allows NaN inside a Series. Instead of crashing or giving wrong results, it understands that the value is missing.
 - Let’s test
-
+```python
 s = pd.Series([10, None, 30])
 print(s)  # Handles missing values
 ```
@@ -239,7 +239,7 @@ Think of .head() as saying:
 “Show me just the first few rows so I can see what’s inside.” By default, .head() shows the first 5 rows of your dataset. You can also peek at more rows: df.head(10) for 10 rows.
 
 Let’s try: print(students_df.head(2)) #prints first 2 rows
-<img width="577" height="199" alt="Screenshot 2025-09-04 at 7 00 25 PM" src="https://github.com/user-attachments/assets/19088215-7512-418a-af85-025592f52775" />
+<img width="653" height="323" alt="Screenshot 2025-09-04 at 7 00 25 PM" src="https://github.com/user-attachments/assets/19088215-7512-418a-af85-025592f52775"/>
 
 - .tail(): Look at the End. If .head() is a sneak peek at the start, then .tail() is a sneak peek at the end.
 - By default, .tail() shows the last 5 rows of your dataset.
