@@ -20,6 +20,8 @@ Why? Real-world data is never perfect, sometimes values are missing. Pandas help
 ```python
 print(students_df.isnull())
 ```
+<img width="453" height="148" alt="Screenshot 2025-09-04 at 6 34 00 PM" src="https://github.com/user-attachments/assets/5bdddf7f-e8a3-4942-bfb7-eff9184dd8b7" />
+
 
 👉 Output: A table of `True`/`False`.  
 - `True` = value is missing (NaN).  
@@ -29,6 +31,7 @@ print(students_df.isnull())
 ```python
 print(students_df.isnull().sum())
 ```
+<img width="419" height="193" alt="Screenshot 2025-09-04 at 6 34 45 PM" src="https://github.com/user-attachments/assets/daefbded-9c50-4736-81e3-d9a3bddd7c6d" />
 
 👉 Easier to read than the True/False table.  
 
@@ -37,6 +40,7 @@ print(students_df.isnull().sum())
 students_df["age"] = students_df["age"].fillna(students_df["age"].mean())
 print(students_df.isnull())
 ```
+<img width="437" height="138" alt="Screenshot 2025-09-04 at 6 35 14 PM" src="https://github.com/user-attachments/assets/c31bfd08-2bd9-4f10-927c-72ae98fde20f" />
 
 Before: row 3 had `True` (missing age).  
 After filling: row 3 now shows `False` (no missing value).  
@@ -54,6 +58,7 @@ Why rename columns?
 students_df = students_df.rename(columns={"score": "final_score", "grade": "class_grade"})
 print(students_df.head())
 ```
+<img width="592" height="202" alt="Screenshot 2025-09-04 at 6 35 41 PM" src="https://github.com/user-attachments/assets/5794420c-68b1-411d-a35c-d8eb82e77348" />
 
 ---
 
@@ -67,12 +72,15 @@ Why?
 ```python
 print(students_df.dtypes)
 ```
+<img width="620" height="225" alt="Screenshot 2025-09-04 at 6 35 54 PM" src="https://github.com/user-attachments/assets/9cc9683b-02d0-4b62-beca-7f3cae2da94c" />
 
+**Don’t you think age should be an integer instead of a float?**
 **Fix the type of `age` to integer:**  
 ```python
 students_df["age"] = students_df["age"].astype("int")
 print(students_df.dtypes)
 ```
+<img width="555" height="192" alt="Screenshot 2025-09-04 at 6 36 53 PM" src="https://github.com/user-attachments/assets/17d90d35-e437-4160-990f-756120a02d48" />
 
 ---
 
@@ -84,11 +92,13 @@ Sometimes the same record gets entered twice, which messes up results.
 ```python
 print(students_df.duplicated())
 ```
+<img width="324" height="182" alt="Screenshot 2025-09-04 at 6 37 07 PM" src="https://github.com/user-attachments/assets/4b031ca5-639c-4f4d-9ae2-31e7aaf5e4f3" />
 
 **Count duplicates:**  
 ```python
 print(students_df.duplicated().sum())
 ```
+<img width="174" height="51" alt="Screenshot 2025-09-04 at 6 37 35 PM" src="https://github.com/user-attachments/assets/0cbdeb74-28b9-4684-a729-cd4bc58087a0" />
 
 **Remove duplicates:**  
 ```python
