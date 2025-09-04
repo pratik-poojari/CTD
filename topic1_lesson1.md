@@ -238,22 +238,28 @@ Example with `students.csv`:Let’s Load the data using-import pandas as pd
 Think of .head() as saying:
 “Show me just the first few rows so I can see what’s inside.” By default, .head() shows the first 5 rows of your dataset. You can also peek at more rows: df.head(10) for 10 rows.
 
-Let’s try: print(students_df.head(2)) #prints first 2 rows
+Let’s try: 
+```python
+print(students_df.head(2)) #prints first 2 rows
+```
 <img width="653" height="323" alt="Screenshot 2025-09-04 at 7 00 25 PM" src="https://github.com/user-attachments/assets/19088215-7512-418a-af85-025592f52775"/>
 
 - .tail(): Look at the End. If .head() is a sneak peek at the start, then .tail() is a sneak peek at the end.
 - By default, .tail() shows the last 5 rows of your dataset.
-- Let’s try: print(students_df.tail()) #prints last 5 rows.
-
-print(students_df.tail())    # Last 5 rows
+- Let’s try:
+```python  
+print(students_df.tail()) #prints last 5 rows
 ```
-<img width="516" height="280" alt="Screenshot 2025-09-04 at 6 48 17 PM" src="https://github.com/user-attachments/assets/5190b786-a3a7-4d91-9621-76b0a17308e2" />
+<img width="520" height="280" alt="Screenshot 2025-09-04 at 7 17 34 PM" src="https://github.com/user-attachments/assets/cb0e1303-ea1b-43a1-9b73-145935213a33" />
 
-- .info():  Get the Blueprint
-- .info() is like asking Pandas: “Tell me the structure of this dataset.”
-- Let’s try: print(students_df.info())
+- .info():  Get the Blueprint. It is like asking Pandas: “Tell me the structure of this dataset.”
+- Let’s try:
+```python
+print(students_df.info())
+```
 - When you run df.info(), Pandas gives you a summary report of your DataFrame.
-<img width="445" height="334" alt="Screenshot 2025-09-04 at 6 49 45 PM" src="https://github.com/user-attachments/assets/183e4323-3c7b-43f8-a92f-c9dc36b7e6d4" />
+<img width="475" height="348" alt="Screenshot 2025-09-04 at 7 18 57 PM" src="https://github.com/user-attachments/assets/03ea7d7c-a120-43b4-ba0d-c811c52e32e5" />
+
 
 - Understanding .info() Output
 RangeIndex: The dataset has 6 rows (0 to 5).
@@ -266,8 +272,8 @@ Data types: Numbers (int, float) and text (object).
 
 - Let’s try: print(students_df.describe())
 Gives us:
+<img width="380" height="205" alt="Screenshot 2025-09-04 at 7 19 28 PM" src="https://github.com/user-attachments/assets/81977e12-5865-48d5-ae2e-05887cf7fd43" />
 
-<img width="432" height="205" alt="Screenshot 2025-09-04 at 6 50 58 PM" src="https://github.com/user-attachments/assets/43c25eb3-50fc-4423-ae0f-0408e62cdec5" />
 
 - What .describe() tells us:
 count: how many values (notice 5, not 6, because of missing data)
@@ -278,10 +284,8 @@ min & max: smallest and biggest
 So .describe() is like a quick health report of your numbers.
 
 
-
 - Quick tip
 Usually the experts suggest these three are always the first commands you should run after loading any dataset, so that you get a good knowledge of your data you will be working with.
-
 
 ---
 
