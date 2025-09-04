@@ -16,11 +16,14 @@ For instance: In a dataset with student info, maybe you only care about **name**
 ```python
 print(students_df["name"])  # This gives you a Series (just one column)
 ```
+<img width="467" height="161" alt="Screenshot 2025-09-04 at 6 21 43 PM" src="https://github.com/user-attachments/assets/a8a0a2ef-1d2c-4bdd-8502-cb3e9c9ad019" />
+
 
 **Select multiple columns:**  
 ```python
 print(students_df[["name", "age"]])  # This gives you a DataFrame (2 columns)
 ```
+<img width="324" height="171" alt="Screenshot 2025-09-04 at 6 21 50 PM" src="https://github.com/user-attachments/assets/52eea9c2-bcdf-4d35-b6b6-ee0436fab9ab" />
 
 ---
 
@@ -37,6 +40,7 @@ Datasets can be huge, millions of rows. Being able to grab just the row(s) you n
 students_df = students_df.set_index("name")
 print(students_df.loc["Carol"])
 ```
+<img width="315" height="136" alt="Screenshot 2025-09-04 at 6 22 54 PM" src="https://github.com/user-attachments/assets/86e23600-f251-457f-8296-666bae5e2cd2" />
 
 #### `.iloc[]`  
 - Think **i for index number**.  
@@ -48,6 +52,7 @@ print(students_df.loc["Carol"])
 students_df = students_df.reset_index()
 print(students_df.iloc[2])
 ```
+<img width="208" height="137" alt="Screenshot 2025-09-04 at 6 23 17 PM" src="https://github.com/user-attachments/assets/fb9f9759-093e-441f-995d-3254415cd839" />
 
 ---
 
@@ -64,11 +69,13 @@ This helps us find rows based on conditions.
 ```python
 print(students_df[students_df["age"] > 30])
 ```
+<img width="496" height="75" alt="Screenshot 2025-09-04 at 6 23 45 PM" src="https://github.com/user-attachments/assets/f95415cc-b165-4ee4-86c4-3dc1eaedfc33" />
 
 **Example: Students with grade “A”**  
 ```python
 print(students_df[students_df["grade"] == "A"])
 ```
+<img width="484" height="93" alt="Screenshot 2025-09-04 at 6 24 01 PM" src="https://github.com/user-attachments/assets/4fd6d2bc-7041-41b9-b867-e146f9a93b45" />
 
 ---
 
@@ -84,6 +91,7 @@ For example:
 ```python
 students_df.sort_values("score", ascending=False)
 ```
+<img width="532" height="239" alt="Screenshot 2025-09-04 at 6 24 12 PM" src="https://github.com/user-attachments/assets/d4bd9642-d929-4c77-ae31-90ff17bd68a8" />
 
 ---
 
