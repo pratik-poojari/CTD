@@ -16,14 +16,15 @@ For instance: In a dataset with student info, maybe you only care about **name**
 ```python
 print(students_df["name"])  # This gives you a Series (just one column)
 ```
-<img width="467" height="161" alt="Screenshot 2025-09-04 at 6 21 43 PM" src="https://github.com/user-attachments/assets/a8a0a2ef-1d2c-4bdd-8502-cb3e9c9ad019" />
+<img width="502" height="197" alt="Screenshot 2025-09-04 at 6 27 02 PM" src="https://github.com/user-attachments/assets/b204acbf-137c-4018-be41-655f20593a12" />
+
 
 
 **Select multiple columns:**  
 ```python
 print(students_df[["name", "age"]])  # This gives you a DataFrame (2 columns)
 ```
-<img width="324" height="171" alt="Screenshot 2025-09-04 at 6 21 50 PM" src="https://github.com/user-attachments/assets/52eea9c2-bcdf-4d35-b6b6-ee0436fab9ab" />
+<img width="371" height="214" alt="Screenshot 2025-09-04 at 6 27 17 PM" src="https://github.com/user-attachments/assets/507d6b65-d88d-4b62-bcf1-528a2f8ef35f" />
 
 ---
 
