@@ -189,6 +189,13 @@ print(df)
 ```
 <img width="312" height="213" alt="Screenshot 2025-09-04 at 7 07 44 PM" src="https://github.com/user-attachments/assets/e0ecca13-57e7-45c7-9919-f9da6e56cf63" />
 
+- Now, Read a Series (pick a column)
+```python
+ages = df["age"]   # this is a Series
+print(ages)
+```
+<img width="494" height="208" alt="Screenshot 2025-09-04 at 7 12 11 PM" src="https://github.com/user-attachments/assets/95fad01c-8d9b-46e9-8baa-2db4372b9b55" />
+
 ---
 
 
