@@ -179,7 +179,7 @@ data = {
 }
 df = pd.DataFrame(data)
 print(df)
-
+```
 <img width="312" height="213" alt="Screenshot 2025-09-04 at 7 07 44 PM" src="https://github.com/user-attachments/assets/e0ecca13-57e7-45c7-9919-f9da6e56cf63" />
 
 ---
