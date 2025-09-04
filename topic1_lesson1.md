@@ -219,9 +219,12 @@ Example with `students.csv`:Let’s Load the data using-import pandas as pd
 <img width="653" height="323" alt="Screenshot 2025-09-04 at 6 46 31 PM" src="https://github.com/user-attachments/assets/4f17a569-dfd4-4314-9a79-3b126d059b39" />
 
 
-```python
-students_df = pd.read_csv("students.csv")
-<img width="569" height="239" alt="Screenshot 2025-09-04 at 6 47 08 PM" src="https://github.com/user-attachments/assets/213fd019-ccb3-42bb-a96c-98cf9da1378f" />
+- .head(): Take a Peek
+Think of .head() as saying:
+“Show me just the first few rows so I can see what’s inside.” By default, .head() shows the first 5 rows of your dataset. You can also peek at more rows: df.head(10) for 10 rows.
+
+Let’s try: print(students_df.head(2)) #prints first 2 rows
+<img width="577" height="199" alt="Screenshot 2025-09-04 at 7 00 25 PM" src="https://github.com/user-attachments/assets/19088215-7512-418a-af85-025592f52775" />
 
 - .tail(): Look at the End. If .head() is a sneak peek at the start, then .tail() is a sneak peek at the end.
 - By default, .tail() shows the last 5 rows of your dataset.
