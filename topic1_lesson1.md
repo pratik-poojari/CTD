@@ -166,24 +166,24 @@ print(my_dict_series)
 
 ## Reading a Series from a DataFrame
 
+A **Series** in Pandas represents a single column of data. To understand this better, let’s first create a simple DataFrame and then select a column from it.
+
+### Step 1: Create a DataFrame
+
 ```python
+import pandas as pd
+
 data = {
     "name": ["Alice", "Bob", "Carol"],
     "age": [25, 30, 22]
 }
 df = pd.DataFrame(data)
-print(df)```
+print(df)
 
-<img width="283" height="202" alt="Screenshot 2025-09-04 at 6 42 56 PM" src="https://github.com/user-attachments/assets/baa1b038-667c-4ba6-a07c-184f201de3df" />
-
-# Read a Series (pick a column)
-```python
-ages = df["age"]
-print(ages)```
-
-<img width="483" height="217" alt="Screenshot 2025-09-04 at 6 43 08 PM" src="https://github.com/user-attachments/assets/2b37d44f-88f6-4475-8b32-f3634fbadb59" />
+<img width="312" height="213" alt="Screenshot 2025-09-04 at 7 07 44 PM" src="https://github.com/user-attachments/assets/e0ecca13-57e7-45c7-9919-f9da6e56cf63" />
 
 ---
+
 
 ## Why Series are Important
 
