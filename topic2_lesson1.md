@@ -18,8 +18,6 @@ print(students_df["name"])  # This gives you a Series (just one column)
 ```
 <img width="502" height="197" alt="Screenshot 2025-09-04 at 6 27 02 PM" src="https://github.com/user-attachments/assets/b204acbf-137c-4018-be41-655f20593a12" />
 
-
-
 **Select multiple columns:**  
 ```python
 print(students_df[["name", "age"]])  # This gives you a DataFrame (2 columns)
@@ -99,19 +97,49 @@ students_df.sort_values("score", ascending=False)
 ## Quiz: Selecting & Filtering Data 🎯
 
 **Q1. How do you select just the `name` column from `students_df`?**  
-A1. `students_df["name"]`  
+<details>
+<summary>Show Answer</summary>
+
+```python
+students_df["name"]
+```
+</details>
 
 **Q2. How do you select both `name` and `age` columns?**  
-A2. `students_df[["name", "age"]]`  
+<details>
+<summary>Show Answer</summary>
+
+```python
+students_df[["name", "age"]]
+```
+</details>
 
 **Q3. How do you select the first row using `.iloc`?**  
-A3. `students_df.iloc[0]`  
+<details>
+<summary>Show Answer</summary>
+
+```python
+students_df.iloc[0]
+```
+</details>
 
 **Q4. How do you select the third row using `.loc` (assuming labels)?**  
-A4. `students_df.loc[2]`  
+<details>
+<summary>Show Answer</summary>
+
+```python
+students_df.loc[2]
+```
+</details>
 
 **Q5. Show the rows where age is greater than 30.**  
-A5. `students_df[students_df["age"] > 30]`  
+<details>
+<summary>Show Answer</summary>
+
+```python
+students_df[students_df["age"] > 30]
+```
+</details>
 
 ---
 
