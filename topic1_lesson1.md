@@ -262,13 +262,13 @@ print(students_df.info())
 
 
 - Understanding .info() Output
-RangeIndex: The dataset has 6 rows (0 to 5).
-Data columns:  The dataset has 6 columns.
-Columns: id, name, age, grade, city, score.
-Missing values: Some columns have missing values: age, grade, city, score.
-Data types: Numbers (int, float) and text (object).
-.describe(): Quick Statistics
-.describe() gives you a quick summary of the numbers in your dataset.
+- RangeIndex: The dataset has 6 rows (0 to 5).
+- Data columns:  The dataset has 6 columns.
+- Columns: id, name, age, grade, city, score.
+- Missing values: Some columns have missing values: age, grade, city, score.
+- Data types: Numbers (int, float) and text (object).
+- .describe(): Quick Statistics
+- .describe() gives you a quick summary of the numbers in your dataset.
 
 - Let’s try: print(students_df.describe())
 Gives us:
@@ -276,10 +276,9 @@ Gives us:
 
 
 - What .describe() tells us:
-count: how many values (notice 5, not 6, because of missing data)
-mean: the average
-min & max: smallest and biggest
-25%, 50%, 75%: quartiles (like checkpoints in the data)
+- count: how many values (notice 5, not 6, because of missing data)
+- mean: the average
+- min & max: smallest and biggest 25%, 50%, 75%: quartiles (like checkpoints in the data)
 
 So .describe() is like a quick health report of your numbers.
 
