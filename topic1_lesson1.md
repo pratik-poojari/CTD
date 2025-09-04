@@ -134,7 +134,6 @@ print(df)
 <img width="464" height="220" alt="Screenshot 2025-09-04 at 6 41 18 PM" src="https://github.com/user-attachments/assets/720e22bb-f2a5-4bbd-b76d-24ff728634ff" />
 
 - Now, Read a Series (pick a column)
-- 
 ```python
 ages = df["age"]   # this is a Series
 print(ages)
