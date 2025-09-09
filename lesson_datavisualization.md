@@ -41,6 +41,8 @@ plt.show()
 ```
 
 Output:
+<img width="439" height="347" alt="Screenshot 2025-09-09 at 3 02 18 PM" src="https://github.com/user-attachments/assets/4389bc0b-443d-4204-989a-a6161397aad7" />
+
 
 ---
 
@@ -59,6 +61,8 @@ plt.show()
 ```
 
 Output:
+<img width="512" height="383" alt="Screenshot 2025-09-09 at 3 02 34 PM" src="https://github.com/user-attachments/assets/ab4ab418-b5cb-4a28-95d0-e1a2c0a92cfc" />
+
 
 ---
 
@@ -77,6 +81,8 @@ plt.show()
 ```
 
 Output:
+<img width="385" height="299" alt="Screenshot 2025-09-09 at 3 02 51 PM" src="https://github.com/user-attachments/assets/d63b3bfb-fa1a-481f-a64b-17cecce0b97c" />
+
 
 ---
 
@@ -94,6 +100,8 @@ plt.show()
 ```
 
 Output:
+<img width="459" height="358" alt="Screenshot 2025-09-09 at 3 03 06 PM" src="https://github.com/user-attachments/assets/b0e3937f-1872-44fd-b677-ff233cbb4342" />
+
 
 ---
 
@@ -112,8 +120,60 @@ plt.show()
 ```
 
 Output:
+<img width="394" height="297" alt="Screenshot 2025-09-09 at 3 03 23 PM" src="https://github.com/user-attachments/assets/07030e5b-766b-4983-9b0b-513c84183790" />
 
 ---
+
+## Quiz: Data Visualization with Matplotlib 🎯
+
+**Q1. Which Python library do we use for data visualization in this lesson?**  
+<details>
+<summary>Show Answer</summary>  
+
+Matplotlib (`import matplotlib.pyplot as plt`)  
+
+</details>
+
+**Q2. Which type of plot is best for showing trends over time?**  
+<details>
+<summary>Show Answer</summary>  
+
+Line Plot  
+
+</details>
+
+**Q3. Which plot would you use to compare marks of students?**  
+<details>
+<summary>Show Answer</summary>  
+
+Bar Plot  
+
+</details>
+
+**Q4. If you want to see the relationship between hours studied and exam scores, which plot should you use?**  
+<details>
+<summary>Show Answer</summary>  
+
+Scatter Plot  
+
+</details>
+
+**Q5. Which plot helps you understand the distribution of exam scores in a class?**  
+<details>
+<summary>Show Answer</summary>  
+
+Histogram  
+
+</details>
+
+**Q6. How do you add a legend to a chart in Matplotlib?**  
+<details>
+<summary>Show Answer</summary>  
+
+Use `plt.legend()`  
+
+</details>
+
 
 ## Lesson 1 Wrap-Up
 
