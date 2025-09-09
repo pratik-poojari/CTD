@@ -205,12 +205,14 @@ class_b = pd.DataFrame({
 })
 print(class_b)
 ```
+<img width="290" height="124" alt="Screenshot 2025-09-09 at 3 50 35 PM" src="https://github.com/user-attachments/assets/3e654800-0443-4eee-87ee-af38672625c3" />
+
 ```python
 # Combine the two classes into one big list
 all_students = pd.concat([class_a, class_b])
 print(all_students)
 ```
-<img width="290" height="124" alt="Screenshot 2025-09-09 at 3 50 35 PM" src="https://github.com/user-attachments/assets/3e654800-0443-4eee-87ee-af38672625c3" />
+<img width="221" height="146" alt="Screenshot 2025-09-09 at 3 53 51 PM" src="https://github.com/user-attachments/assets/4e6825e6-58f5-455a-9725-df3b4b6ea623" />
 
 ---
 
