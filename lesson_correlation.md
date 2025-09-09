@@ -59,6 +59,7 @@ plt.xlabel("Study Hours")
 plt.ylabel("Exam Scores")
 plt.show()
 ```
+<img width="609" height="393" alt="Screenshot 2025-09-09 at 3 36 50 PM" src="https://github.com/user-attachments/assets/ab63ea79-4619-40d6-96c1-8f95c19e217b" />
 
 **Interpretation:**  
 The dots go upwards together, as study hours increase, exam scores increase.  
@@ -89,6 +90,8 @@ sns.heatmap(corr, annot=True, cmap="coolwarm")
 plt.title("Correlation Heatmap")
 plt.show()
 ```
+<img width="564" height="429" alt="Screenshot 2025-09-09 at 3 37 09 PM" src="https://github.com/user-attachments/assets/707594dd-3e92-4d51-b351-a73fa12806e1" />
+
 
 **Interpretation:**  
 - hours_study and exam_score → strongly positive (close to +1).  
@@ -137,8 +140,10 @@ df = pd.DataFrame(data)
 # Correlation matrix
 print(df.corr())
 ```
+**Interpretation:** 
 
-**Interpretation:**  
+<img width="554" height="152" alt="Screenshot 2025-09-09 at 3 37 55 PM" src="https://github.com/user-attachments/assets/2c1639e8-f178-40ed-ba8a-42b5b65b6863" />
+
 - hours_study & exam_score → strong positive correlation.  
 - hours_study & sleep_hours → negative correlation.  
 - exam_score & sleep_hours → negative correlation.  
@@ -201,13 +206,22 @@ Output shows correlation close to 0.
 ## Quick Quiz 🎯
 
 **Q1. If the correlation between study hours and exam scores is +0.9, what does that mean?**  
-A1. It means students who study more tend to score higher (strong positive relationship).  
+<details>
+<summary>Show Answer</summary>  
+It means students who study more tend to score higher (strong positive relationship).  
+</details>
 
 **Q2. If the correlation between gaming hours and sleep hours is -0.8, what does that mean?**  
-A2. It means students who game more tend to sleep less (strong negative relationship).  
+<details>
+<summary>Show Answer</summary>  
+It means students who game more tend to sleep less (strong negative relationship).  
+</details>
 
 **Q3. Shoe size and exam scores show a correlation close to 0. What does that mean?**  
-A3. It means shoe size and exam scores have no meaningful relationship (no correlation).  
+<details>
+<summary>Show Answer</summary>  
+It means shoe size and exam scores have no meaningful relationship (no correlation).  
+</details>
 
 ---
 
