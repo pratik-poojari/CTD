@@ -19,6 +19,7 @@ students_df["bonus_score"] = students_df["final_score"] + 5
 # print specific columns and see the data
 print(students_df[["name", "final_score", "bonus_score"]])
 ```
+<img width="430" height="159" alt="Screenshot 2025-09-09 at 3 44 19 PM" src="https://github.com/user-attachments/assets/3c15f083-05a8-4bed-afa3-43c76fcfc542" />
 
 Here we created a new column called **bonus_score**:  
 - It simply takes everyone’s final_score and adds 5 extra points.  
@@ -38,8 +39,10 @@ Here we created a new column called **bonus_score**:
 students_df["name_upper"] = students_df["name"].apply(str.upper)
 print(students_df[["name", "name_upper"]])
 ```
+<img width="304" height="184" alt="Screenshot 2025-09-09 at 3 45 27 PM" src="https://github.com/user-attachments/assets/a034f773-7107-4e5d-a590-9bd7204bbadd" />
 
 ---
+
 
 ## Replacing Values
 
@@ -54,6 +57,7 @@ We want to replace `"A"` with `"A+"`.
 students_df["class_grade"] = students_df["class_grade"].replace("A", "A+")
 print(students_df[["name", "class_grade"]])
 ```
+<img width="263" height="178" alt="Screenshot 2025-09-09 at 3 45 38 PM" src="https://github.com/user-attachments/assets/dc283845-8858-441f-8d31-2d2cd14330c7" />
 
 ---
 
@@ -114,6 +118,7 @@ Aggregation means applying a summary calculation to each group.
 # This will show the average score for each grade.
 print(students_df.groupby("class_grade")["final_score"].mean())
 ```
+<img width="406" height="144" alt="Screenshot 2025-09-09 at 3 46 15 PM" src="https://github.com/user-attachments/assets/f58b548c-b062-4318-867c-74bf196d7e8a" />
 
 **Example 2: Number of students in each city**
 
@@ -121,6 +126,7 @@ print(students_df.groupby("class_grade")["final_score"].mean())
 # This counts how many students are from each city.
 print(students_df.groupby("city")["id"].count())
 ```
+<img width="286" height="191" alt="Screenshot 2025-09-09 at 3 46 26 PM" src="https://github.com/user-attachments/assets/175bcf71-13ca-46d4-b0d8-90d1bb3cac84" />
 
 Grouping & aggregation helps you summarize big datasets into meaningful insights without looking row by row.
 
@@ -152,12 +158,17 @@ students_info = pd.DataFrame({
 })
 print(students_info)
 
+<img width="234" height="132" alt="Screenshot 2025-09-09 at 3 46 50 PM" src="https://github.com/user-attachments/assets/bf61c077-246f-44be-aa7b-02695288f7ba" />
+
+
 # List two: Exam scores
 exam_scores = pd.DataFrame({
     "id": [1, 2, 3],
     "score": [85, 90, 78]
 })
 print(exam_scores)
+
+<img width="201" height="128" alt="Screenshot 2025-09-09 at 3 47 13 PM" src="https://github.com/user-attachments/assets/6986efda-0a19-4404-94d2-ad2de26a0277" />
 
 # Merge the two lists on "id"
 merged_df = pd.merge(students_info, exam_scores, on="id")
