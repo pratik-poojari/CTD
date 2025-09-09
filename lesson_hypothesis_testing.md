@@ -25,6 +25,8 @@ At the end of a hypothesis test, we don’t prove something 100%, we just decide
 ⚠️ Hypothesis testing ≠ absolute truth.  
 Lastly, hypothesis testing doesn’t give us certainty, it helps us decide if there’s enough evidence to support a claim, or if the difference we see could just be random chance.
 
+<img width="648" height="306" alt="Screenshot 2025-09-09 at 3 31 25 PM" src="https://github.com/user-attachments/assets/c7a158ef-6530-45c3-9319-3041e3cfe2a9" />
+
 ---
 
 ## Null Hypothesis (H₀): No Effect / No Difference
@@ -205,6 +207,7 @@ plt.ylabel("Number of Students")
 plt.legend()
 plt.show()
 ```
+<img width="557" height="397" alt="Screenshot 2025-09-09 at 3 32 15 PM" src="https://github.com/user-attachments/assets/8ad241bf-89b0-4390-a9ee-66a02670e376" />
 
 **Explanation:**  
 - Step 1 (t-test): Calculated t-statistic & p-value.  
