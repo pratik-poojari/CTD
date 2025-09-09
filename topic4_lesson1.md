@@ -157,7 +157,7 @@ students_info = pd.DataFrame({
     "name": ["Alice", "Bob", "Carol"]
 })
 print(students_info)
-
+```
 <img width="234" height="132" alt="Screenshot 2025-09-09 at 3 46 50 PM" src="https://github.com/user-attachments/assets/bf61c077-246f-44be-aa7b-02695288f7ba" />
 
 
@@ -173,7 +173,8 @@ print(exam_scores)
 # Merge the two lists on "id"
 merged_df = pd.merge(students_info, exam_scores, on="id")
 print(merged_df)
-```
+
+<img width="456" height="170" alt="Screenshot 2025-09-09 at 3 49 35 PM" src="https://github.com/user-attachments/assets/c730d5d6-bb61-4d19-bd04-98fc3e1319bc" />
 
 Here, the `on="id"` tells pandas to use the id column as the matching key in both tables.
 
@@ -193,18 +194,23 @@ class_a = pd.DataFrame({
     "score": [85, 90]
 })
 print(class_a)
+```
+<img width="321" height="125" alt="Screenshot 2025-09-09 at 3 50 18 PM" src="https://github.com/user-attachments/assets/8f5fa2d8-863b-459a-b168-bdcae3824685" />
 
+```python
 # Class B students
 class_b = pd.DataFrame({
     "name": ["Carol", "David"],
     "score": [78, 92]
 })
 print(class_b)
-
+```
+```python
 # Combine the two classes into one big list
 all_students = pd.concat([class_a, class_b])
 print(all_students)
 ```
+<img width="290" height="124" alt="Screenshot 2025-09-09 at 3 50 35 PM" src="https://github.com/user-attachments/assets/3e654800-0443-4eee-87ee-af38672625c3" />
 
 ---
 
